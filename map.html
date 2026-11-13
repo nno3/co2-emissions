@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CO₂ emissions by country, 2002</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load("current", { packages: ["geochart"] });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["Country", "CO₂ emissions (billion tons, 2002)"],
+          ["United States", 316.0],
+          ["Russia", 86.3],
+          ["China", 82.3],
+          ["Germany", 78.0],
+          ["United Kingdom", 69.6],
+          ["Japan", 43.5],
+          ["France", 32.2],
+          ["Ukraine", 25.5],
+          ["Canada", 23.3],
+          ["Poland", 22.0],
+          ["India", 21.0],
+          ["Italy", 17.3],
+          ["South Africa", 12.9],
+          ["Mexico", 11.7],
+          ["Australia", 11.4],
+          ["United Arab Emirates", 1.7]
+        ]);
+
+        var chart = new google.visualization.GeoChart(document.getElementById("regions_div"));
+        chart.draw(data, { colorAxis: { minValue: 0 }, legend: { textStyle: { fontSize: 12 } } });
+      }
+
+      window.addEventListener("resize", drawRegionsMap);
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="map.html">Map</a>
+            <a href="japan.html">Japan</a>
+        </nav>
+        <h1>Emissions by country, 2002</h1>
+        <p>Shaded by the 2002 CO₂ figure, in billion tons. Darker green is higher.</p>
+    </header>
+    <main>
+        <div class="chart">
+            <div id="regions_div"></div>
+        </div>
+    </main>
+</body>
+</html>
