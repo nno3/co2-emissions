@@ -18,6 +18,12 @@
         <p>A world map of 2002 emissions, Japan’s population plotted against emissions from 1960 to 2024, and a bar chart of 2001 against 2002.</p>
     </header>
     <main>
+        <section class="intro">
+            <h2>The data</h2>
+            <p>The emissions come from the Kaggle dataset <a href="https://www.kaggle.com/datasets/moazzimalibhatti/co2-emission-by-countries-year-wise-17502022">CO2 Emission by countries Year wise (1750–2022)</a>. Each row is a country and a year, and the CO₂ column is in tons. The number rises every year, so it is a running total: the gap between 2001 and 2002 is the tons added in that year. The map uses 2002 for sixteen countries. The bar chart uses 2001 and 2002 for China, India, Japan, Russia, the United Arab Emirates, the United Kingdom, and the United States.</p>
+            <p>Japan’s population comes from the World Bank indicator <a href="https://data.worldbank.org/indicator/SP.POP.TOTL">Population, total</a>. On that chart it is shown in millions, beside the emissions from the Kaggle file.</p>
+            <p>We prepared both tables in Orange by filtering the rows, filling missing values, and combining them.</p>
+        </section>
         <div class="cards">
             <a href="map.html">
                 <strong>Emissions by country</strong>
