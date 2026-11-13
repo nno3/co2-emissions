@@ -1,6 +1,6 @@
 # CO₂ emissions
 
-Charts of country CO₂ emissions and Japan’s population against emissions.
+Charts of country CO₂ emissions, Japan’s population against emissions, and the change from 2001 to 2002.
 
 I prepared the data in Orange by filtering, filling missing values, and combining tables, then drew these charts.
 

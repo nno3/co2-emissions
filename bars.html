@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CO₂ emissions in 2001 and 2002</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Country", "2001", "2002"],
+          ["China", 78398966689, 82271561986],
+          ["India", 19932284055, 20955311258],
+          ["Japan", 42259160302, 43538280443],
+          ["Russia", 84830759848, 86326453485],
+          ["United Arab Emirates", 1664192750, 1747890971],
+          ["United Kingdom", 69047289288, 69607355320],
+          ["United States", 310000000000, 316000000000]
+        ]);
+
+        var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
+        chart.draw(data, {
+          title: "CO\u2082 emissions (tons) in 2001 and 2002",
+          colors: ["#f4a259", "#e07a1f"],
+          legend: { position: "top" },
+          vAxis: { title: "CO\u2082 emissions (tons)", format: "short" },
+          hAxis: { title: "Country" },
+          bar: { groupWidth: "70%" }
+        });
+      }
+
+      window.addEventListener("resize", drawChart);
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="map.html">Map</a>
+            <a href="japan.html">Japan</a>
+            <a href="bars.html">2001–2002</a>
+        </nav>
+        <h1>2001 and 2002</h1>
+        <p>Orange bars for China, India, Japan, Russia, the United Arab Emirates, the United Kingdom, and the United States. The lighter bar is 2001 and the darker bar is 2002.</p>
+    </header>
+    <main>
+        <div class="chart">
+            <div id="chart_div"></div>
+        </div>
+    </main>
+</body>
+</html>
